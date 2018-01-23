@@ -14,7 +14,8 @@ if [ ! -f "${app_path}" ] ; then
   exit 1
 fi
 if [ -z "${app_center_device_set}"] ; then
-echo " [!] Missing required input: app_center_device_set"
+  echo " [!] Missing required input: app_center_device_set"
+  exit 1
 if
 if [ -z "${app_center_app}" ] ; then
   echo " [!] Missing required input: app_center_app"
@@ -30,6 +31,7 @@ if [ -z "${app_center_test_series}" ] ; then
 fi
 if [ -z "${xamarin_ui_test_build_directory}"] ; then
   echo " [!] Missing required input: xamarin_ui_test_build_directory"
+  exit 1
 if
 if [ ! -f "${xamarin_ui_test_build_directory}" ] ; then
   echo " [!] File doesn't exist at specified path: ${xamarin_ui_test_build_directory}"
@@ -48,8 +50,6 @@ echo " (i) Provided Xamarin UI Test Path: ${xamarin_ui_test_build_directory}"
 
 # ---------------------
 # --- Main
-
-npm config list
 
 npm install appcenter-cli@1.0.8 -g
 

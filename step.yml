@@ -63,9 +63,9 @@ inputs:
   - app_center_device_set:
     opts:
       title: "App Center Device Set"
-      summary: "App Center Device Set"
+      summary: "The App Center Device Set"
       description: |
-        App Center Device Set.
+        The App Center Device Set.
       is_expand: true
       is_required: true
       value_options: []
