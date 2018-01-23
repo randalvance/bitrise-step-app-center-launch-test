@@ -32,7 +32,7 @@ fi
 if [ -z "${xamarin_ui_test_build_directory}"] ; then
   echo " [!] Missing required input: xamarin_ui_test_build_directory"
   exit 1
-if
+fi
 if [ ! -f "${xamarin_ui_test_build_directory}" ] ; then
   echo " [!] File doesn't exist at specified path: ${xamarin_ui_test_build_directory}"
   exit 1
