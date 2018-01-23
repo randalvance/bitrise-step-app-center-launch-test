@@ -1,0 +1,89 @@
+title: |-
+  App Center Launch Test
+summary: |
+  Run App Center Launch test
+description: |
+  Verify that your build works on a real device by running a launch test on a real device
+website: https://github.com/randalvance/bitrise-step-app-center-launch-test
+source_code_url: https://github.com/randalvance/bitrise-step-app-center-launch-test
+support_url: https://github.com/randalvance/bitrise-step-app-center-launch-test/issues
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+project_type_tags:
+  - ios
+  - macos
+  - android
+  - xamarin
+  - react-native
+  - cordova
+  - ionic
+type_tags:
+  - test
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+deps:
+  brew:
+  - name: npm
+  apt_get:
+  - name: npm
+toolkit:
+  bash:
+    entry_file: step.sh
+inputs:
+  - app_path:
+    opts:
+      title: "App path"
+      summary: ""
+      description: |
+        App file path, for example to an APK file for Android.
+      is_expand: true
+      is_required: true
+      value_options: []
+  - app_center_app:
+    opts:
+      title: "App Center app"
+      summary: username/app_name or org/app_name
+      description: |
+        Get all available apps using cli "appcenter apps list".
+      is_expand: true
+      is_required: true
+      value_options: []
+  - app_center_token:
+    opts:
+      title: "App Center API token"
+      summary: "App Center API token"
+      description: |
+        App Center API token".
+      is_expand: true
+      is_required: true
+      value_options: []
+  - app_center_device_set:
+    opts:
+      title: "App Center Device Set"
+      summary: "App Center Device Set"
+      description: |
+        App Center Device Set".
+      is_expand: true
+      is_required: true
+      value_options: []
+  - app_center_test_series:
+    opts:
+      title: "App Center Test Series"
+      summary: "App Center Test Series"
+      description: |
+        App Center Test Series".
+      is_expand: true
+      is_required: true
+      value_options: []
+  - xamarin_ui_test_build_directory:
+    opts:
+      title: "Xamarin UI Test Build Directory"
+      summary: "Xamarin UI Test Build Directory"
+      description: |
+        Xamarin UI Test Build Directory".
+      is_expand: true
+      is_required: true
+      value_options: []
