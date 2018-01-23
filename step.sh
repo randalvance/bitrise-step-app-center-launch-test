@@ -56,6 +56,8 @@ npm install appcenter-cli@1.0.8 -g
 
 appcenter test run uitest --app "${app_center_app}" --devices "${app_center_device_set}" --app-path "${app_path}" --test-series "${app_center_test_series}" --locale "en_US" --build-dir "${xamarin_ui_test_build_directory}"
 
+
+
 #
 # --- Exit codes:
 # The exit code of your Step is very important. If you return
