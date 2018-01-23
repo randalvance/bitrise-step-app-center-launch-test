@@ -13,10 +13,10 @@ if [ ! -f "${app_path}" ] ; then
   echo " [!] File doesn't exist at specified path: ${app_path}"
   exit 1
 fi
-if [ -z "${app_center_device_set}"] ; then
+if [ -z "${app_center_device_set}" ] ; then
   echo " [!] Missing required input: app_center_device_set"
   exit 1
-if
+fi
 if [ -z "${app_center_app}" ] ; then
   echo " [!] Missing required input: app_center_app"
   exit 1
@@ -29,7 +29,7 @@ if [ -z "${app_center_test_series}" ] ; then
   echo " [!] Missing required input: app_center_test_series"
   exit 1
 fi
-if [ -z "${xamarin_ui_test_build_directory}"] ; then
+if [ -z "${xamarin_ui_test_build_directory}" ] ; then
   echo " [!] Missing required input: xamarin_ui_test_build_directory"
   exit 1
 fi
